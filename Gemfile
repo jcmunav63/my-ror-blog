@@ -65,3 +65,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Rubocop for linters checking
+gem 'rubocop', '>= 1.0', '< 2.0'
