@@ -160,7 +160,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Controller, views, forms, CRUD operations, validations, authentication, and API usage.**
+- **Controllers, views, forms, CRUD operations, validations, authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
