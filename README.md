@@ -44,9 +44,10 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
   </ul>
 
 ### Key Features <a name="key-features"></a>
-- **Set up a the Ruby on Rails project.**
+- **Set up a Ruby on Rails project.**
 - **Connect the Rails project to a PostgreSQL database.**
 - **Define and set up the Data Model using Active Record migration.**
+- **Implement table associations and data processing methods in the data model.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +83,7 @@ $ gem install rails
 
 ### Install
 
-This project does not require additional dependencies, just Ruby interpreter. However, it uses RuboCop as a linter and you should set it up as well.
+This project requires the following dependencies: Ruby interpreter, Gem package manager, Ruby on Rails web framework, and a PostgreSQL database server. Additionally, the project requires two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
 
 ```sh
 bundle install
