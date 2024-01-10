@@ -6,9 +6,9 @@
   <br/>
   <h3><b>My Ruby on Rails Blog App</b></h3>
 </div>
-## 📗 Table of Contents <a name="table_of-contents"></a>
+📗 Table of Contents <a name="table_of-contents"></a>
 
-- [📗 Table of Contents](#-table-of-contents-)
+- [📗 Table of Contents](#table-of-contents)
 - [📖 About project ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails Blog App is a complete Ruby on Rails Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation and testing. First part: Data Model definition.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Second part: Processing Data using Models.
 
 ## 🛠 Built With <a name="built-with"></a>
 
