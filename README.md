@@ -6,9 +6,9 @@
   <br/>
   <h3><b>My Ruby on Rails Blog App</b></h3>
 </div>
-## 📗 Table of Contents <a name="table_of-contents"></a>
+📗 Table of Contents <a name="table_of-contents"></a>
 
-- [📗 Table of Contents](#-table-of-contents-)
+- [📗 Table of Contents](#table-of-contents)
 - [📖 About project ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails Blog App is a complete Ruby on Rails Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation and testing. First part: Data Model definition.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Second part: Processing Data using Models.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,9 +44,10 @@ The My Ruby on Rails Blog App is a complete Ruby on Rails Blog project including
   </ul>
 
 ### Key Features <a name="key-features"></a>
-- **Set up a the Ruby on Rails project.**
+- **Set up a Ruby on Rails project.**
 - **Connect the Rails project to a PostgreSQL database.**
 - **Define and set up the Data Model using Active Record migration.**
+- **Implement table associations and data processing methods in the data model.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +83,7 @@ $ gem install rails
 
 ### Install
 
-This project does not require additional dependencies, just Ruby interpreter. However, it uses RuboCop as a linter and you should set it up as well.
+This project requires the following dependencies: Ruby interpreter, Gem package manager, Ruby on Rails web framework, and a PostgreSQL database server. Additionally, the project requires two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
 
 ```sh
 bundle install
@@ -159,7 +160,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Controller, views, forms, CRUD operations, validations, authentication, and API usage.**
+- **Controllers, views, forms, CRUD operations, validations, authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
