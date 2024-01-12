@@ -4,7 +4,8 @@ RSpec.describe 'The Post model tests' do
   it 'Post is not valid if its title is nil' do
     user1 = User.create!(name: 'Test User', posts_counter: 0,
                          photo: 'https://cdn.pixabay.com/photo/2016/02/25/12/10/plants-276014_630.jpg')
-    post1 = Post.new(title: nil, text: 'This is a valid post text', comments_counter: 0, likes_counter: 0, author: user1)
+    post1 = Post.new(title: nil, text: 'This is a valid post text', comments_counter: 0, likes_counter: 0,
+                     author: user1)
     expect(post1).to_not be_valid
   end
 
@@ -45,7 +46,7 @@ RSpec.describe 'The Post model tests' do
   it 'Updates the user\'s posts_counter when creating a new post' do
     user6 = User.create!(name: 'Peter Drucker', posts_counter: 0,
                          photo: 'https://unsplash.com/photo/2017/03/21/15/12/sea-14922_554.jpg')
-    post6 = Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0, author: user6)
+    Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0, author: user6)
 
     expect(user6.reload.posts_counter).to eq(1)
   end
