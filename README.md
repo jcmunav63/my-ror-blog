@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Second part: Processing Data using Models.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Third part: Adding Data validations and specs in models.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -48,6 +48,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Connect the Rails project to a PostgreSQL database.**
 - **Define and set up the Data Model using Active Record migration.**
 - **Implement table associations and data processing methods in the data model.**
+- **Adding data validations and specs in models.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,7 +70,7 @@ In order to run this project you need:
 
 [Set Up Rails](https://www.ruby-lang.org/en/documentation/installation/)
 
-Prerquisites: Ruby, Ruby Development Kit (for Windows), Ruby Gems packaging system, and SQLite. Run the following command...
+Prerquisites: Ruby, Ruby Development Kit (for Windows), Ruby Gems packaging system, and PostgreSQL database server. Run the following commands...
 ```sh
 $ gem install rails
 ```
@@ -160,7 +161,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Controllers, views, forms, CRUD operations, validations, authentication, and API usage.**
+- **Controllers, views, forms, CRUD operations, authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,7 +188,7 @@ I would like to thank all of my colleagues who inspire to do my best everyday.
 
 **Did you create this project from scratch?**
 
-  - Yes, it is a complete Ruby on Rails project for creating a web blog, with connection to an external PostgreSQL database, CRUD operations, validation, user authentication, testing, and API usage.
+  - Yes, it is a complete Ruby on Rails project for creating a web blog, with connection to an external PostgreSQL database, CRUD operations, data validation, user authentication, testing, and API usage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
