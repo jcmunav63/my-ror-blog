@@ -24,7 +24,7 @@ development:
   encoding: unicode
   database: my_ror_blog
   host: localhost
-  # port: 5432
+  port: 5432
   pool: 5
   username: postgres
   password: jcadmin
@@ -65,7 +65,7 @@ test:
   encoding: unicode
   database: my_ror_blog_test
   host: localhost
-  # port: 5432
+  port: 5432
   pool: 5
   username: postgres
   password: jcadmin
@@ -91,12 +91,12 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 
-test:
+production:
   adapter: postgresql
   encoding: unicode
   database: my_ror_blog_production
   host: localhost
-  # port: 5432
+  port: 5432
   pool: 5
-  username: my_ror_blog
-  password: <%= ENV["MY_ROR_BLOG_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: jcadmin
