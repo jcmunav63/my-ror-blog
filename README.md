@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Third part: Adding Data validations and specs in models.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Fourth part: Adding Controllers to the app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,6 +49,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Define and set up the Data Model using Active Record migration.**
 - **Implement table associations and data processing methods in the data model.**
 - **Adding data validations and specs in models.**
+- **Include controllers for all models. Follow the wireframe designs.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +162,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Controllers, views, forms, CRUD operations, authentication, and API usage.**
+- **Views, forms, CRUD operations, authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
