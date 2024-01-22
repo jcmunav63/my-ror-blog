@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET /users/:id' do
     it 'Renders the show template' do
-      user = create(:user)
+      user = User.create(name: 'User1', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
       get user_path(user)
       expect(response).to render_template(:show)
       expect(response).to have_http_status(200)
