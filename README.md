@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, validation, testing and API usage. Fourth part: Adding Controllers to the app.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Fifth part: Setting up Specs for controllers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,6 +50,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Implement table associations and data processing methods in the data model.**
 - **Adding data validations and specs in models.**
 - **Include controllers for all models. Follow the wireframe designs.**
+- **Setting up specs for all controllers.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +86,7 @@ $ gem install rails
 
 ### Install
 
-This project requires the following dependencies: Ruby interpreter, Gem package manager, Ruby on Rails web framework, and a PostgreSQL database server. Additionally, the project requires two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
+This project requires the following dependencies: Ruby interpreter, Gem package manager, Ruby on Rails web framework, PostgreSQL database server, and RSpec for unit testing. Additionally, the project requires two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
 
 ```sh
 bundle install
@@ -162,7 +163,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Views, forms, CRUD operations, authentication, and API usage.**
+- **Views, forms, CRUD operations, user authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
