@@ -10,6 +10,7 @@ RSpec.describe PostsController, type: :request do
       get user_posts_path(user)
       expect(response).to render_template(:index)
       expect(response).to have_http_status(200)
+      expect(response.body).to include('User All Posts')
     end
   end
 
@@ -21,6 +22,7 @@ RSpec.describe PostsController, type: :request do
       get user_post_path(user, post)
       expect(response).to render_template(:show)
       expect(response).to have_http_status(200)
+      expect(response.body).to include('Single Post Page')
     end
   end
 end
