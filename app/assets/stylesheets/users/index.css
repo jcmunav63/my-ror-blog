@@ -1,0 +1,63 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-left: 2rem;;
+}
+.users-list {
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+}
+
+.user-line {
+  width: 90%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  padding: 0px;
+  display: flex;
+}
+
+.user-photo {
+  border: 2px solid black;
+  width: 3rem;
+  height: 3.7rem;
+}
+
+.name-counter {
+  border: 2px solid black;
+  margin-left: 1rem;
+  padding: 0px;
+  padding-left: 1%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 2.5rem;
+}
+
+.user-line a {
+  font-size: 2rem;
+}
+
+/* .posts-counter {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+} */
+
+.right-top {
+  font-size: 2.8rem;
+}
+
+.right {
+  margin-left: 1rem;
+}
+
+.counter {
+  font-size: small;
+}

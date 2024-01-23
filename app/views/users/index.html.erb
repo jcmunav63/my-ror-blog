@@ -1,15 +1,16 @@
 <h1>Users Index</h1>
-<ul>
-  <li>
-    <p>User 1</p>
-    <p># of Posts: x</p>
-  </li>
-  <li>
-    <p>User 2</p>
-    <p># of Posts: x</p>
-  </li>
-  <li>
-    <p>User 3</p>
-    <p># of Posts: x</p>
-  </li>
-</ul>
+<% @users.each do |user| %>
+  <div class="user-line">
+    <%= link_to image_tag(user.photo, class: 'user-photo'), user_path(user) %>
+    <div class="name-counter">
+      <span class="name">
+        <%= link_to user.name, user_path(user) %>
+      </span>
+      <div>
+        <span class="right-top"></span>
+        <span class="counter">Number of posts: <%= user.posts_counter %></span>
+        <span class="right"></span>
+      </div>
+    </div>
+  </div>
+<% end %>

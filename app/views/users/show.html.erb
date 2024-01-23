@@ -1,16 +1,30 @@
 <h1>User Page with List of Posts</h1>
-<p>User 1</p>
-<p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+<div class="user-line">
+    <%= link_to image_tag(@user.photo, class: 'user-photo'), user_path(@user) %>
+    <div class="name-counter">
+      <span class="name">
+        <%= link_to @user.name, user_path(@user) %>
+      </span>
+      <div>
+        <span class="right-top"></span>
+        <span class="counter">Number of posts: <%= @user.posts_counter %></span>
+        <span class="right"></span>
+      </div>
+    </div>
+</div>
+<section>
+  <h4>Bio:</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
   Ac tortor dignissim convallis aenean et. Lectus magna fringilla urna 
   porttitor rhoncus dolor. Consequat interdum varius sit amet mattis 
-  vulputate. Fringilla urna porttitor rhoncus dolor purus non enim. 
-  Pharetra massa massa ultricies mi quis hendrerit. Praesent elementum 
-  facilisis leo vel. Ultrices neque ornare aenean euismod elementum 
-  nisi quis eleifend quam. Turpis cursus in hac habitasse platea 
-  dictumst quisque sagittis.</p>
-<ul>
-  <li>Post 1</li>
-  <li>Post 2</li>
-  <li>Post 3</li>
-</ul>
+  vulputate. Fringilla urna porttitor rhoncus dolor purus non enim.</p>
+</section>
+
+<% @posts.each do |post| %>
+  <div style="border: 1px solid black; margin-bottom: 10px; padding: 10px;">
+    <p style="font-size: small;">Post <%= post.id %>: <%= post.title %></p>
+  </div>
+<% end %>
+
+<%= will_paginate @posts %>
