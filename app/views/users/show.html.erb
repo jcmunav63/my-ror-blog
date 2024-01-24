@@ -1,17 +1,5 @@
 <h1>User Page with List of Posts</h1>
-<div class="user-line">
-    <%= link_to image_tag(@user.photo, class: 'user-photo'), user_path(@user) %>
-    <div class="name-counter">
-      <span class="name">
-        <%= link_to @user.name, user_path(@user) %>
-      </span>
-      <div>
-        <span class="right-top"></span>
-        <span class="counter">Number of posts: <%= @user.posts_counter %></span>
-        <span class="right"></span>
-      </div>
-    </div>
-</div>
+<%= render partial: 'shared/user_info', locals: { user: @user } %>
 <section>
   <h4>Bio:</h4>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
