@@ -1,36 +1,26 @@
 * {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
-  margin-left: 2%;
+  padding-left: 3%;
 }
 
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
-section {
-  margin-left: 2%;
-  margin-right: 4%;
-  margin-bottom: 1%;
-  border: 2px solid black;
-  padding: 1rem;
-}
-
-.users-list {
-  padding: 0;
-  margin: 0;
+.users_list {
   width: 100%;
 }
 
 .user-line {
-  width: 90%;
-  margin-left: 2%;
-  margin-bottom: 1%;
+  width: 94%;
   padding: 0;
+  margin: 0;
+  padding-left: 3%;
+  margin-bottom: 1%;
   display: flex;
 }
 
@@ -42,10 +32,7 @@ section {
 
 .name-counter {
   border: 2px solid black;
-  margin-left: 1rem;
-  padding: 0;
-  padding-left: 1%;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -67,20 +54,33 @@ section {
 }
 
 .counter {
-  font-size: small;
+  font-size: medium;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  width: 94%;
+}
+
+section {
+  width: 93%;
+  margin: 0;
+  padding: 0;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 1%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  border: 2px solid black;
 }
 
 .post-border {
   border: 2px solid black;
-  margin-left: 2%;
-  margin-right: 4%;
+  width: 93%;
+  margin-left: 3%;
+  margin-right: 3%;
   margin-bottom: 1%;
-  padding: 0.5rem;
-}
-
-.post-border p {
-  margin: 0;
-  padding: 0;
 }
 
 .button {
@@ -115,4 +115,12 @@ section {
 
 .sep {
   margin-top: 2rem;
+}
+
+.right2 {
+  /* padding-left: 60%; */
+  padding-bottom: 1%;
+  padding-right: 2%;
+  position: relative;
+  text-align: right;
 }

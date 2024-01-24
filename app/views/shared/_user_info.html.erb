@@ -1,14 +1,13 @@
 <div class="user-line">
-    <%= link_to image_tag(user.photo, class: 'user-photo'), user_path(user) %>
-    <div class="name-counter">
-      <span class="name">
-        <%= link_to user.name, user_path(user) %>
-      </span>
-      <div>
-        <span class="right-top"></span>
-        <span class="counter">Number of posts: <%= user.posts_counter %></span>
-        <span class="right"></span>
-      </div>
+  <%= link_to image_tag(user.photo, class: 'user-photo'), user_path(user) %>
+  <div class="name-counter">
+    <span class="name">
+      <%= link_to user.name, user_path(user) %>
+    </span>
+    <div>
+      <span class="right-top"></span>
+      <span class="counter">Number of posts: <strong><%= user.posts_counter %></strong></span>
+      <span class="right"></span>
     </div>
   </div>
-  
+</div>

@@ -1,20 +1,19 @@
 <h1>User All Posts</h1>
-<%= render partial: 'shared/user_info', locals: { user: post.author } %>
+<%= render partial: 'shared/user_info', locals: { user: @user } %>
 
 <% @posts.each do |post| %>
   <div class="post-line">
     <h3>Post <%= post.id %>: <%= post.title %>
-      <span class="right1"><%= link_to "Read More", post_path(post) %></span>
+      <span class="right1"><%= link_to "Read More", user_post_path(post.author, post) %></span>
     </h3>
 
-    <p><%= truncate(post.text, length: 70) %>
-      <span class="right2">Comments: <strong><%= post.comments_counter %></strong>
-      Likes: <strong><%= post.likes_counter %></strong></span>
-    </p>
+    <p><%= truncate(post.text, length: 70) %></p>
+    <p class="right2">Comments: <strong><%= post.comments_counter %>&nbsp;</strong>
+      Likes: <strong><%= post.likes_counter %></strong></p>
 
     <!-- Display comments for the post -->
     <ul>
-      <% post.comments.each do |comment| %>
+      <% post.five_most_recent_comments.each do |comment| %>
         <li><%= comment.user.name %>: <%= comment.text %></li>
       <% end %>
     </ul>

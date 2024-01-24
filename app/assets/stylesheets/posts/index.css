@@ -1,23 +1,26 @@
 * {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
-  margin-left: 2%;
+  padding-left: 3%;
 }
 
 .users-list {
-  padding: 0;
-  margin: 0;
   width: 100%;
 }
 
 .user-line {
-  width: 90%;
-  margin-left: 2%;
-  margin-bottom: 1%;
+  width: 94%;
   padding: 0;
+  margin: 0;
+  padding-left: 3%;
+  margin-bottom: 1%;
   display: flex;
 }
 
@@ -29,10 +32,7 @@ h1 {
 
 .name-counter {
   border: 2px solid black;
-  margin-left: 1rem;
-  padding: 0;
-  padding-left: 1%;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -54,16 +54,15 @@ h1 {
 }
 
 .counter {
-  font-size: 1rem;
+  font-size: medium;
 }
 
 .post-line {
   border: 2px solid black;
-  margin-left: 2%;
+  width: 93%;
+  margin-left: 3%;
   margin-bottom: 1%;
-  padding: 0;
   padding-left: 1%;
-  width: 90%;
 }
 
 .right1 {
@@ -75,14 +74,16 @@ h1 {
 }
 
 .right2 {
-  margin-right: 2rem;
-  float: right;
+  padding-left: 60%;
+  padding-bottom: 1%;
+  position: relative;
 }
 
 ul {
   list-style: none;
   margin: 1rem;
   padding: 0;
+  padding-top: 1%;
 }
 
 .page {

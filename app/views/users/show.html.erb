@@ -9,9 +9,13 @@
   vulputate. Fringilla urna porttitor rhoncus dolor purus non enim.</p>
 </section>
 
-<% @posts.each do |post| %>
+<% @user.three_most_recent_posts.each do |post| %>
   <div class="post-border">
-    <p>Post <%= post.id %>: <%= post.title %></p>
+    <p>Post <%= post.id %>: <strong><%= post.title %></strong></p>
+    <p><%= post.text %></p>
+    <p class="right2">Comments: <strong><%= post.comments_counter %> &nbsp;</strong>
+       Likes: <strong><%= post.likes_counter %></strong></p>
+    
   </div>
 <% end %>
 
