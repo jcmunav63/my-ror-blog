@@ -1,25 +1,36 @@
 <h1>User All Posts</h1>
-<h2>User 1</h2>
-<div>
-  <h3>Post 1</h3>
-  <p>Amet dictum sit amet justo donec enim diam vulputate ut. Etiam sit 
-    amet nisl purus in mollis nunc. Aenean euismod elementum nisi quis 
-    eleifend quam adipiscing vitae. Habitasse platea dictumst quisque 
-    sagittis purus.</p>
-  <ul>
-    <li>User 3 - Comment 1</li>
-    <li>User 4 - Comment 2</li>
-    <li>User 5 - Comment 3</li>
-  </ul>
+<div class="user-line">
+    <%= link_to image_tag(@user.photo, class: 'user-photo'), user_path(@user) %>
+    <div class="name-counter">
+      <span class="name">
+        <%= link_to @user.name, user_path(@user) %>
+      </span>
+      <div>
+        <span class="right-top"></span>
+        <span class="counter">Number of posts: <strong><%= @user.posts_counter %></strong></span>
+        <span class="right"></span>
+      </div>
+    </div>
 </div>
-<div>
-  <h3>Post 2</h3>
-  <p>Duis convallis convallis tellus id interdum velit laoreet id. 
-    Diam sit amet nisl suscipit adipiscing bibendum est ultricies. 
-    Eu facilisis sed odio morbi quis commodo odio aenean.</p>
-  <ul>
-    <li>User 6 - Comment 1</li>
-    <li>User 4 - Comment 2</li>
-    <li>User 5 - Comment 3</li>
-  </ul>
-</div>
+
+<% @posts.each do |post| %>
+  <div class="post-line">
+    <h3>Post <%= post.id %>: <%= post.title %>
+      <span class="right1"><%= link_to "Read More", post_path(post) %></span>
+    </h3>
+
+    <p><%= truncate(post.text, length: 70) %>
+      <span class="right2">Comments: <strong><%= post.comments_counter %></strong>
+      Likes: <strong><%= post.likes_counter %></strong></span>
+    </p>
+
+    <!-- Display comments for the post -->
+    <ul>
+      <% post.comments.each do |comment| %>
+        <li><%= comment.user.name %>: <%= comment.text %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="page"><%= will_paginate @posts %></div>

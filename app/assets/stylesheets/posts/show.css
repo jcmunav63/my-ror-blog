@@ -83,36 +83,26 @@ section {
   padding: 0px;
 }
 
-.button {
-  margin-left: 25%;
-  margin-top: 5%;
-  margin-bottom: 2%;
-  width: 5rem;
-  height: 2rem;
-  padding: 0.5rem;
-  background-color: dodgerblue;
-  border: 1px solid black;
-  border-radius: 6px;
-  color: black;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.button:hover {
-  margin-left: 25%;
-  margin-top: 5%;
-  margin-bottom: 2%;
-  width: 5rem;
-  height: 2rem;
-  padding: 0.5rem;
-  background-color: rgb(138, 190, 241);
-  border: 1px solid rgb(19, 1, 85);
-  border-radius: 6px;
-  color: rgb(19, 1, 85);
-  font-weight: 500;
-  text-decoration: none;
-}
-
 .sep {
   margin-top: 2rem;
+}
+
+.section1 {
+  margin-left: 2%;
+  margin-right: 5%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 2px solid black;
+  margin-bottom: 1%;
+}
+
+.h3 {
+  font-size:medium;
+}
+
+.h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 2rem;
+  float: right;
 }

@@ -54,5 +54,38 @@ h1 {
 }
 
 .counter {
-  font-size: small;
+  font-size: 1re;
+}
+
+.post-line {
+  border: 2px solid black;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  padding: 0px;
+  padding-left: 1%;
+  width: 90%;
+}
+
+.right1 {
+  margin-right: 2rem;
+  float: right;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.right2 {
+  margin-right: 2rem;
+  float: right;
+}
+
+ul {
+  list-style: none;
+  margin: 1rem;
+  padding: 0px;
+}
+
+.page {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
