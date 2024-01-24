@@ -2,21 +2,26 @@
 <%= render partial: 'shared/user_info', locals: { user: @user } %>
 
 <% @posts.each do |post| %>
-  <div class="post-line">
-    <h3>Post <%= post.id %>: <%= post.title %>
-      <span class="right1"><%= link_to "Read More", user_post_path(post.author, post) %></span>
-    </h3>
-
-    <p><%= truncate(post.text, length: 70) %></p>
-    <p class="right2">Comments: <strong><%= post.comments_counter %>&nbsp;</strong>
-      Likes: <strong><%= post.likes_counter %></strong></p>
+  <div class="post-container">
+    <div class="post-line">
+      <h3>Post <%= post.id %>: <%= post.title %>
+        <span class="right1"><%= link_to "Read More", user_post_path(post.author, post) %></span>
+      </h3>
+      <p><%= truncate(post.text, length: 70) %></p>
+      <p class="right2">Comments: <strong><%= post.comments_counter %>&nbsp;</strong>
+        Likes: <strong><%= post.likes_counter %></strong></p>
+    </div>
 
     <!-- Display comments for the post -->
-    <ul>
-      <% post.five_most_recent_comments.each do |comment| %>
-        <li><%= comment.user.name %>: <%= comment.text %></li>
-      <% end %>
-    </ul>
+    <% if post.comments_counter > 0 %>
+      <div class="comments">
+        <ul>
+          <% post.five_most_recent_comments.each do |comment| %>
+            <li><%= comment.user.name %>: <%= comment.text %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
   </div>
 <% end %>
 
