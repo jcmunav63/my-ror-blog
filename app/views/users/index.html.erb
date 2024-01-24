@@ -1,15 +1,4 @@
 <h1>Users Index</h1>
-<ul>
-  <li>
-    <p>User 1</p>
-    <p># of Posts: x</p>
-  </li>
-  <li>
-    <p>User 2</p>
-    <p># of Posts: x</p>
-  </li>
-  <li>
-    <p>User 3</p>
-    <p># of Posts: x</p>
-  </li>
-</ul>
+<% @users.each do |user| %>
+  <%= render partial: 'shared/user_info', locals: { user: user } %>
+<% end %>

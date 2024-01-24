@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Fifth part: Setting up Specs for controllers.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Sixth part: Implementing the views of four different pages (users index, a single user page, a single user's post index, and a single post page).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,6 +51,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Adding data validations and specs in models.**
 - **Include controllers for all models. Follow the wireframe designs.**
 - **Setting up specs for all controllers.**
+- **Implement views for users and posts, and its corresponding comments and likes counters.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +164,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Views, forms, CRUD operations, user authentication, and API usage.**
+- **Forms, CRUD operations, user authentication, and API usage.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,7 +183,7 @@ Thanks in advance.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank all of my colleagues who inspire to do my best everyday.
+I would like to thank all of my colleagues who inspire me to do my best everyday.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
