@@ -10,10 +10,4 @@ class UsersController < ApplicationController
     @posts = @user.posts.paginate(page: params[:page], per_page: 5)
     @show_all_posts_button = @user.posts_counter.positive?
   end
-
-  # private
-
-  # def set_current_user
-  #   @current_user ||= User.first
-  # end
 end
