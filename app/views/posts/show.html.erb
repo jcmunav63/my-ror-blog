@@ -13,7 +13,7 @@
     <!-- Display comments for the post -->
     <ul>
       <% @post.comments.each do |comment| %>
-        <li><%= comment.user.name %> says: <%= comment.text %></li>
+        <li><%= comment.author.name %> says: <%= comment.text %></li>
       <% end %>
     </ul>
   </div>
@@ -21,4 +21,9 @@
 
 <div class="sep"></div>
 
-<%= link_to "Back to all users", users_path, class: "root" %>
+<div>
+  <%= link_to 'Add Comment', new_user_post_comment_path(@post.author, @post), class: "new-comment" %>
+
+  <%= link_to "Back to all users", users_path, class: "root" %>
+</div>
+

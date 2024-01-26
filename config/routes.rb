@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root to: 'users#index'
 
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:new, :create, :index, :show]
+    resources :posts, only: [:new, :create, :index, :show] do
+      resources :comments, only: [:new, :create]
+    end
   end
 end
