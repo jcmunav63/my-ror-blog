@@ -1,0 +1,27 @@
+document.addEventListener('turbo:load', () => {
+  const likeButton = document.getElementById('like_button');
+  const unlikeButton = document.getElementById('unlike_button');
+
+  likeButton.addEventListener('ajax:success', (event) => {
+    const [, , xhr] = event.detail;
+    const postId = xhr.responseURL.split('/').pop();
+    updateLikeCounter(postId, true);
+  });
+
+  unlikeButton.addEventListener('ajax:success', (event) => {
+    const [, , xhr] = event.detail;
+    const postId = xhr.responseURL.split('/').pop();
+    updateLikeCounter(postId, false);
+  });
+
+  function updateLikeCounter(postId, isLike) {
+    const likeCounter = document.getElementById(`like_counter_${postId}`);
+    const count = parseInt(likeCounter.innerText);
+
+    if (isLike) {
+      likeCounter.innerText = count + 1;
+    } else {
+      likeCounter.innerText = count - 1;
+    }
+  }
+});

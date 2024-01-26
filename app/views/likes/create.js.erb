@@ -1,0 +1,3 @@
+// Update the like count on the page
+var likeCountElement = document.getElementById('like-count');
+likeCountElement.innerText = <%= @post.likes.count %>;

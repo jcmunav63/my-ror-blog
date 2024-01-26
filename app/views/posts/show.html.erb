@@ -21,9 +21,44 @@
 
 <div class="sep"></div>
 
-<div>
+<div class="buttons-div">
   <%= link_to 'Add Comment', new_user_post_comment_path(@post.author, @post), class: "new-comment" %>
+
+  <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: 'thumbs-up', style: 'display: inline;', id: 'like_button', remote: true %>
+  <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: 'thumbs-up', style: 'display: inline;', id: 'unlike_button', remote: true %>
+
+  <%# <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: "thumbs-up", style: 'display: inline;', id: 'like_button', remote: true %>
+  <%# <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: "thumbs-up", style: 'display: inline;', id: 'like_button' %>
+
+  <%# <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: "thumbs-up", style: 'display: inline;', id: 'unlike_button', remote: true %>
+  <%# <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: "thumbs-up", style: 'display: inline;', id: 'unlike_button' %>
 
   <%= link_to "Back to all users", users_path, class: "root" %>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const likeButton = document.getElementById('like_button');
+    const unlikeButton = document.getElementById('unlike_button');
+
+    likeButton.addEventListener('click', function() {
+      likeButton.style.display = 'inline';
+      unlikeButton.style.display = 'inline';
+    });
+
+    unlikeButton.addEventListener('click', function() {
+      likeButton.style.display = 'inline';
+      unlikeButton.style.display = 'inline';
+    });
+
+    // Check if the post is liked by the current user and adjust button visibility
+    // if (<%= @post.liked_by_user?(@current_user) %>) {
+    //   likeButton.style.display = 'none';
+    //   unlikeButton.style.display = 'inline';
+    // } else {
+    //   likeButton.style.display = 'inline';
+    //   unlikeButton.style.display = 'none';
+    // }
+  });
+</script>
 

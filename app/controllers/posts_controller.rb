@@ -24,6 +24,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def like
+    @post = Post.find(params[:id])
+    @post.likes.create(user: @current_user)
+
+    redirect_to user_post_path(@post.author, @post)
+  end
+
+  def unlike
+    @post = Post.find(params[:id])
+    @post.likes.where(user: @current_user).destroy_all if @post.likes.exists?(user: @current_user)
+
+    redirect_to user_post_path(@post.author, @post)
+  end
+
   private
 
   def post_params

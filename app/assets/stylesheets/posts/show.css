@@ -107,8 +107,12 @@ section {
   float: right;
 }
 
+.buttons-div {
+  display: flex;
+}
+
 .new-comment {
-  margin-top: 3%;
+  margin-top: 0;
   margin-left: 25%;
   margin-bottom: 1%;
   font-weight: 500;
@@ -141,7 +145,7 @@ section {
 }
 
 .root {
-  margin-top: 3%;
+  margin-top: 0;
   margin-left: 2%;
   margin-bottom: 1%;
   font-weight: 500;
@@ -172,3 +176,48 @@ section {
   text-decoration: none;
   box-shadow: 2px 2px rgba(122, 122, 122, 0.8);
 }
+
+.thumbs-up {
+  margin-top: 0;
+  margin-left: 20px;
+  margin-bottom: 1%;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: 1px solid blue;
+  border-radius: 4px;
+  background-color: dodgerblue;
+  color: black;
+  text-decoration: none;
+  box-shadow: 3px 3px rgba(122, 122, 122, 0.8);
+}
+
+.thumbs-up:hover {
+  background-color: rgb(138, 190, 241);
+  border: 1px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  color: rgb(19, 1, 85);
+  text-decoration: none;
+  box-shadow: 3px 3px rgba(122, 122, 122, 0.8);
+}
+
+.thumbs-up:active {
+  background-color: rgb(0, 81, 161);
+  border: 1px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  color: rgb(19, 1, 85);
+  text-decoration: none;
+  box-shadow: 2px 2px rgba(122, 122, 122, 0.8);
+}
+
+/* .thumbs-up-erase {
+  margin-left: 2rem;
+  font-size: medium;
+  text-decoration: none;
+}
+
+.thumbs-down-erase {
+  margin-left: 2rem;
+  font-size: medium;
+  text-decoration: none;
+} */
