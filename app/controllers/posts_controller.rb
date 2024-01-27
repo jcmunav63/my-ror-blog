@@ -8,6 +8,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: { likes_counter: @post.reload.likes_counter } }
+    # end
   end
 
   def new

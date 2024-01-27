@@ -3,7 +3,10 @@
 <div class="section1">
   <h2>Post: <%= @post.id %>
     <span class="h3"> by: <%= @post.author.name %></span>
-    <span class="h4"> Comments: <strong><%= @post.comments_counter %></strong> Likes: <strong><%= @post.likes_counter %></strong></span>
+    <span style="font-size: medium; font-weight: 400; margin-left: 60%;"> Comments:</span>
+    <span style="font-size: medium; font-weight: 400;"><%= @post.comments_counter %></span>
+    <span style="font-size: medium; font-weight: 400;"> Likes: </span>
+    <span id="like_count" style="font-size: medium; font-weight: 400;"><%= @post.likes_counter %></span>
   </h2>
   <p><%= @post.text %></p>
 </div>
@@ -21,17 +24,13 @@
 
 <div class="sep"></div>
 
+<div><%= @post.likes.count %> likes</div>
+
 <div class="buttons-div">
   <%= link_to 'Add Comment', new_user_post_comment_path(@post.author, @post), class: "new-comment" %>
 
-  <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: 'thumbs-up', style: 'display: inline;', id: 'like_button', remote: true %>
-  <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: 'thumbs-up', style: 'display: inline;', id: 'unlike_button', remote: true %>
-
-  <%# <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: "thumbs-up", style: 'display: inline;', id: 'like_button', remote: true %>
-  <%# <%= button_to 'Like', user_post_likes_path(@post.author, @post), method: :post, class: "thumbs-up", style: 'display: inline;', id: 'like_button' %>
-
-  <%# <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: "thumbs-up", style: 'display: inline;', id: 'unlike_button', remote: true %>
-  <%# <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), method: :delete, class: "thumbs-up", style: 'display: inline;', id: 'unlike_button' %>
+  <%= button_to 'Like', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'like_button', method: :post %>
+  <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'unlike_button', method: :delete %>
 
   <%= link_to "Back to all users", users_path, class: "root" %>
 </div>
