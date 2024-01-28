@@ -12,9 +12,9 @@ class LikesController < ApplicationController
       @like.errors.full_messages.to_sentence
     end
 
-    if !@like.save
-      flash[:notice] = @like.errors.full_messages.to_sentence
-    end
+    return if @like.save
+
+    flash[:notice] = @like.errors.full_messages.to_sentence
   end
 
   def destroy
@@ -22,7 +22,7 @@ class LikesController < ApplicationController
     post = @like.post
     @like.destroy
 
-    redirect_to user_post_path(@current_user, @like.post)
+    redirect_to user_post_path(@current_user, post)
   end
 
   private

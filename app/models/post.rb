@@ -15,7 +15,7 @@ class Post < ApplicationRecord
   end
 
   def liked_by_user?(user)
-    likes.exists?(user: user)
+    likes.exists?(user:)
   end
 
   private
