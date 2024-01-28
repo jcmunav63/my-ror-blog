@@ -3,18 +3,40 @@
 <div class="section1">
   <h2>Post: <%= @post.id %>
     <span class="h3"> by: <%= @post.author.name %></span>
-    <span class="h4"> Comments: <strong><%= @post.comments_counter %></strong> Likes: <strong><%= @post.likes_counter %></strong></span>
+    <span style="font-size: medium; font-weight: 400; margin-left: 60%;"> Comments:</span>
+    <span style="font-size: medium; font-weight: 400;"><%= @post.comments_counter %></span>
+    <span style="font-size: medium; font-weight: 400;"> Likes: </span>
+    <span id="like_count" style="font-size: medium; font-weight: 400;"><%= @post.likes_counter %></span>
   </h2>
   <p><%= @post.text %></p>
 </div>
 
 <% if @post.comments_counter > 0 %>
   <div class="section1">
-    <!-- Display comments for the post -->
     <ul>
       <% @post.comments.each do |comment| %>
-        <li><%= comment.user.name %> says: <%= comment.text %></li>
+        <li><%= comment.author.name %> says: <%= comment.text %></li>
       <% end %>
     </ul>
   </div>
 <% end %>
+
+<div class="sep"></div>
+
+<div class="buttons-div">
+  <%= link_to 'Add Comment', new_user_post_comment_path(@post.author, @post), class: "new-comment" %>
+
+  <% if @post.nil? %>
+    <p>@post is nil</p>
+  <% elsif @current_user.nil? %>
+    <p>@current_user is nil</p>
+  <% else %>
+    <% like = current_user.likes.find_by(post: @post) %>
+
+    <% if like.nil? %>
+      <%= button_to 'Like', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'like_button', method: :post %>
+    <% end %>
+  <% end %>
+
+  <%= link_to "Back to all users", users_path, class: "root" %>
+</div>

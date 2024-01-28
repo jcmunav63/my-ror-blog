@@ -1,0 +1,15 @@
+<h1>New Comment</h1>
+
+<div class=form-container>
+  <%= form_with(model: [@post, @comment], url: user_post_comments_path(@post.author, @post)) do |form| %>
+
+    <div class="text">
+      <%= form.label :text, 'Comment' %>
+      <%= form.text_area :text, :cols => 70, :rows => 10, class: "text-field" %>
+    </div>
+
+    <div>
+      <%= form.submit 'Create Comment', class: "submit-btn" %>
+    </div>
+  <% end %>
+</div>
