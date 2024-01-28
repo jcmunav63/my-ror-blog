@@ -23,8 +23,8 @@
 
 <% if @show_all_posts_button %>
   <%= link_to "See All Posts", user_posts_path(@user), class: "button" %>
-  <% else%>
-  <%= link_to "New Post", new_user_post_path(@current_user), class: "new-post" %>
+<% else%>
+  <%= link_to "New Post", new_user_post_path(@user), class: "new-post" %>
 <% end %>
 
 <div class="sep"></div>

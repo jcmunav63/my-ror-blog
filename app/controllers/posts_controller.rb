@@ -11,14 +11,16 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = @current_user.posts.build
+    @user = User.find(params[:user_id])
+    @post = @user.posts.build
   end
 
   def create
-    @post = @current_user.posts.build(post_params)
+    @user = User.find(params[:user_id])
+    @post = @user.posts.build(post_params)
 
     if @post.save
-      redirect_to user_post_path(@current_user, @post), notice: 'Post was successfully created!'
+      redirect_to user_post_path(@user, @post), notice: 'Post was successfully created!'
     else
       render :new
     end
@@ -38,7 +40,7 @@ class PostsController < ApplicationController
   private
 
   def set_current_user
-    @current_user = User.first
+    @current_user = User.find(params[:user_id])
   end
 
   def post_params
