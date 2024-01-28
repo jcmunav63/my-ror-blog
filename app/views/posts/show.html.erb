@@ -13,7 +13,6 @@
 
 <% if @post.comments_counter > 0 %>
   <div class="section1">
-    <!-- Display comments for the post -->
     <ul>
       <% @post.comments.each do |comment| %>
         <li><%= comment.author.name %> says: <%= comment.text %></li>
@@ -24,40 +23,20 @@
 
 <div class="sep"></div>
 
-<div><%= @post.likes.count %> likes</div>
-
 <div class="buttons-div">
   <%= link_to 'Add Comment', new_user_post_comment_path(@post.author, @post), class: "new-comment" %>
 
-  <%= button_to 'Like', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'like_button', method: :post %>
-  <%= button_to 'Unlike', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'unlike_button', method: :delete %>
+  <% if @post.nil? %>
+    <p>@post is nil</p>
+  <% elsif @current_user.nil? %>
+    <p>@current_user is nil</p>
+  <% else %>
+    <% like = current_user.likes.find_by(post: @post) %>
+
+    <% if like.nil? %>
+      <%= button_to 'Like', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'like_button', method: :post %>
+    <% end %>
+  <% end %>
 
   <%= link_to "Back to all users", users_path, class: "root" %>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const likeButton = document.getElementById('like_button');
-    const unlikeButton = document.getElementById('unlike_button');
-
-    likeButton.addEventListener('click', function() {
-      likeButton.style.display = 'inline';
-      unlikeButton.style.display = 'inline';
-    });
-
-    unlikeButton.addEventListener('click', function() {
-      likeButton.style.display = 'inline';
-      unlikeButton.style.display = 'inline';
-    });
-
-    // Check if the post is liked by the current user and adjust button visibility
-    // if (<%= @post.liked_by_user?(@current_user) %>) {
-    //   likeButton.style.display = 'none';
-    //   unlikeButton.style.display = 'inline';
-    // } else {
-    //   likeButton.style.display = 'inline';
-    //   unlikeButton.style.display = 'none';
-    // }
-  });
-</script>
-

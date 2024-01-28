@@ -25,6 +25,6 @@
   </div>
 <% end %>
 
-<%= link_to "New Post", new_user_post_path(@current_user), class: "new-post" %>
+<%= link_to "New Post", new_user_post_path(@current_user || current_user), class: "new-post" %>
 
 <div class="page"><%= will_paginate @posts %></div>

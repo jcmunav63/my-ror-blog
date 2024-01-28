@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_current_user
-    @current_user ||= User.first
+    @current_user = User.first
   end
 
   def current_user

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_current_user, only: [:index, :new, :create]
+  before_action :set_current_user
 
   def index
     @user = User.find(params[:user_id])
@@ -8,11 +8,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
-    # respond_to do |format|
-    #   format.html
-    #   format.json { render json: { likes_counter: @post.reload.likes_counter } }
-    # end
   end
 
   def new
@@ -31,9 +26,6 @@ class PostsController < ApplicationController
 
   def like
     @post = Post.find(params[:id])
-    @post.likes.create(user: @current_user)
-
-    redirect_to user_post_path(@post.author, @post)
   end
 
   def unlike
@@ -44,6 +36,9 @@ class PostsController < ApplicationController
   end
 
   private
+  def set_current_user
+    @current_user = User.first
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)
