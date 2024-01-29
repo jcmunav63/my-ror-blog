@@ -1,17 +1,21 @@
 example_id                                      | status | run_time        |
 ----------------------------------------------- | ------ | --------------- |
-./spec/models/comment_spec.rb[1:1]              | failed | 0.02147 seconds |
-./spec/models/like_spec.rb[1:1]                 | passed | 0.09117 seconds |
-./spec/models/post_spec.rb[1:1]                 | passed | 0.00582 seconds |
-./spec/models/post_spec.rb[1:2]                 | passed | 0.07492 seconds |
-./spec/models/post_spec.rb[1:3]                 | passed | 0.00573 seconds |
-./spec/models/post_spec.rb[1:4]                 | passed | 0.00644 seconds |
-./spec/models/post_spec.rb[1:5]                 | failed | 1.21 seconds    |
-./spec/models/post_spec.rb[1:6]                 | passed | 0.02105 seconds |
-./spec/models/user_spec.rb[1:1]                 | passed | 0.00276 seconds |
-./spec/models/user_spec.rb[1:2]                 | passed | 0.00267 seconds |
-./spec/models/user_spec.rb[1:3]                 | passed | 0.0393 seconds  |
-./spec/requests/posts_controller_spec.rb[1:1:1] | failed | 0.05548 seconds |
-./spec/requests/posts_controller_spec.rb[1:2:1] | failed | 1.57 seconds    |
-./spec/requests/users_controller_spec.rb[1:1:1] | passed | 0.18782 seconds |
-./spec/requests/users_controller_spec.rb[1:2:1] | failed | 0.01792 seconds |
+./spec/features/user_integration_spec.rb[1:1]   | failed | 0.04379 seconds |
+./spec/features/user_integration_spec.rb[1:2]   | failed | 0.72721 seconds |
+./spec/features/user_integration_spec.rb[1:3]   | failed | 0.01302 seconds |
+./spec/features/user_integration_spec.rb[1:4]   | failed | 0.0112 seconds  |
+./spec/models/comment_spec.rb[1:1]              | failed | 0.04478 seconds |
+./spec/models/like_spec.rb[1:1]                 | passed | 0.06678 seconds |
+./spec/models/post_spec.rb[1:1]                 | passed | 0.00495 seconds |
+./spec/models/post_spec.rb[1:2]                 | passed | 0.01334 seconds |
+./spec/models/post_spec.rb[1:3]                 | passed | 0.00477 seconds |
+./spec/models/post_spec.rb[1:4]                 | passed | 0.00903 seconds |
+./spec/models/post_spec.rb[1:5]                 | failed | 0.01502 seconds |
+./spec/models/post_spec.rb[1:6]                 | passed | 0.01288 seconds |
+./spec/models/user_spec.rb[1:1]                 | passed | 0.0026 seconds  |
+./spec/models/user_spec.rb[1:2]                 | passed | 0.34874 seconds |
+./spec/models/user_spec.rb[1:3]                 | passed | 0.15342 seconds |
+./spec/requests/posts_controller_spec.rb[1:1:1] | failed | 0.03388 seconds |
+./spec/requests/posts_controller_spec.rb[1:2:1] | passed | 0.04638 seconds |
+./spec/requests/users_controller_spec.rb[1:1:1] | passed | 0.17094 seconds |
+./spec/requests/users_controller_spec.rb[1:2:1] | failed | 0.23531 seconds |
