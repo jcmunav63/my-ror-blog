@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_current_user
+  # before_action :set_current_user
 
   def new
     @user = User.find(params[:user_id])

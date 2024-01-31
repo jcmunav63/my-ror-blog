@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_current_user
+  # before_action :set_current_user
 
   def index
     @user = User.find(params[:user_id])
@@ -39,9 +39,9 @@ class PostsController < ApplicationController
 
   private
 
-  def set_current_user
-    @current_user = User.find(params[:user_id])
-  end
+  # def set_current_user
+  #   @current_user = User.find(params[:user_id])
+  # end
 
   def post_params
     params.require(:post).permit(:title, :text)

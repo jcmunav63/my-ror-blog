@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_current_user
+  # before_action :set_current_user
 
   def create
     @like = @current_user.likes.build(like_params)
@@ -31,7 +31,7 @@ class LikesController < ApplicationController
     params.permit(:post_id)
   end
 
-  def set_current_user
-    @current_user = User.first
-  end
+  # def set_current_user
+  #   @current_user = User.first
+  # end
 end
