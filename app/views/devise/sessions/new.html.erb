@@ -1,5 +1,13 @@
 <h2>Log in</h2>
 
+<div class="flash-messages">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+</div>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -22,5 +30,7 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+
+<%# <%= button_to "Sign Up", new_user_registration_path %>
 
 <%= render "devise/shared/links" %>

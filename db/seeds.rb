@@ -10,6 +10,7 @@
 
 # Add some users
 user1 = User.new(
+  id: '1',
   name: 'Tom Jones',
   photo: 'users/3.PNG',
   bio: 'English developer',
@@ -17,10 +18,11 @@ user1 = User.new(
   password: "me1234", 
   password_confirmation: "me1234"
 )
-user.skip_confirmation! #only if using confirmable in devise settings in user model.
-user.save!
+user1.save!
+# user1.skip_confirmation! #only if using confirmable in devise settings in user model.
 
 user2 = User.new(
+  id: '2',
   name: 'Jessica Smith',
   photo: 'users/4.PNG',
   bio: 'American developer',
@@ -28,10 +30,11 @@ user2 = User.new(
   password: "me1234", 
   password_confirmation: "me1234"
 )
-user.skip_confirmation! #only if using confirmable in devise settings in user model.
-user.save!
+user2.save!
+# user2.skip_confirmation! #only if using confirmable in devise settings in user model.
 
 user3 = User.new(
+  id: '3',
   name: 'Ann Murray',
   photo: 'users/6.PNG',
   bio: 'Polish developer',
@@ -39,10 +42,11 @@ user3 = User.new(
   password: "me1234", 
   password_confirmation: "me1234"
 )
-user.skip_confirmation! #only if using confirmable in devise settings in user model.
-user.save!
+user3.save!
+# user3.skip_confirmation! #only if using confirmable in devise settings in user model.
 
 user4 = User.new(
+  id: '4',
   name: 'Hellen Sunrise',
   photo: 'users/7.PNG',
   bio: 'Southafrican developer',
@@ -50,10 +54,11 @@ user4 = User.new(
   password: "me1234", 
   password_confirmation: "me1234"
 )
-user.skip_confirmation! #only if using confirmable in devise settings in user model.
-user.save!
+user4.save!
+# user4.skip_confirmation! #only if using confirmable in devise settings in user model.
 
 user5 = User.new(
+  id: '5',
   name: 'Paul Bunyon',
   photo: 'users/8.PNG',
   bio: 'French developer',
@@ -61,8 +66,7 @@ user5 = User.new(
   password: "me1234", 
   password_confirmation: "me1234"
 )
-user.skip_confirmation! #only if using confirmable in devise settings in user model.
-user.save!
+user5.save!
+# user5.skip_confirmation! #only if using confirmable in devise settings in user model.
 
 # Add some posts
-

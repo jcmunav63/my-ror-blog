@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   # before_action :set_current_user
+  before_action :authenticate_user!
 
   def index
     @user = User.find(params[:user_id])
@@ -7,11 +8,12 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @post = Post.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @post = @user.posts.build
   end
 
@@ -32,7 +34,7 @@ class PostsController < ApplicationController
 
   def unlike
     @post = Post.find(params[:id])
-    @post.likes.where(user: @current_user).destroy_all if @post.likes.exists?(user: @current_user)
+    @post.likes.where(user: current_user).destroy_all if @post.likes.exists?(user: current_user)
 
     redirect_to user_post_path(@post.author, @post)
   end
