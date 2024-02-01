@@ -1,4 +1,3 @@
-<br />
 <h2 class="headline">Sign up</h2>
 
 <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -11,7 +10,7 @@
   <% end %>
 </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), id: "form-container") do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
