@@ -60,3 +60,21 @@ h1 {
 .logout {
   margin-left: 3%;
 }
+
+#form-container {
+  margin-left: 0;
+  margin-right: 5%;
+  width: auto;
+}
+
+.form-control {
+  height: 40px;
+  border: solid 2px black;
+}
+
+input {
+  margin: 0;
+  padding: 4px;
+  border: solid 1px black;
+  font-size: 1.5rem;
+}

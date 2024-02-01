@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: all, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_importmap_tags %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <p class="alert"><%= alert %></p>
     <div class="logout">
       <% if user_signed_in? %>
-        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "submit-btn2" %>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "submit-btn3" %>
       <% end %>
     </div>
 

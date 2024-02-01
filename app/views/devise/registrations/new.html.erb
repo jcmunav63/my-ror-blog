@@ -10,18 +10,18 @@
   <% end %>
 </div>
 
-<div>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), id: "form-container") do |f| %>
+<div id="form-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
       <% f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, class: "form-control", width: "100px", placeholder: "Name:" %>
+      <%= f.text_field :name, autofocus: true, class: "form-control", height: "35px", placeholder: "Name:" %>
     </div>
     <br />
     <div class="field">
       <% f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", width: "100px", placeholder: "Email:" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", height: "35px", placeholder: "Email:" %>
     </div>
     <br />
     <div class="field">
@@ -29,18 +29,20 @@
       <% if @minimum_password_length %><br />
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", width: "100px", placeholder: "Password:" %>
-    </div>
-
-    <div class="field">
-      <% f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", width: "100px", placeholder: "Password confirm:" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", height: "35px", placeholder: "Password:" %>
     </div>
     <br />
+    <div class="field">
+      <% f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", height: "35px", placeholder: "Password confirm:" %>
+    </div>
+    <br /><br />
     <div class="actions">
       <%= f.submit "Sign up", class: "submit-btn2" %>
     </div>
   <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+<div class="links">
+  <%= render "devise/shared/links" %>
+</div>
