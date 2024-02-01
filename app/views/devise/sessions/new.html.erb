@@ -11,7 +11,7 @@
   <% end %>
 </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), id: "form-container") do |f| %>
   <br />
   <div class="field">
     <% f.label :email %><br />
