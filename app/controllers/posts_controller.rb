@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_current_user
+  before_action :authenticate_user!
 
   def index
     @user = User.find(params[:user_id])
@@ -7,11 +7,12 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id]) # current_user
     @post = Post.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id]) # current_user
     @post = @user.posts.build
   end
 
@@ -28,20 +29,18 @@ class PostsController < ApplicationController
 
   def like
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def unlike
     @post = Post.find(params[:id])
-    @post.likes.where(user: @current_user).destroy_all if @post.likes.exists?(user: @current_user)
+    @user = User.find(params[:user_id])
+    @post.likes.where(user: @user).destroy_all if @post.likes.exists?(user: @user)
 
     redirect_to user_post_path(@post.author, @post)
   end
 
   private
-
-  def set_current_user
-    @current_user = User.find(params[:user_id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :text)
