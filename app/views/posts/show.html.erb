@@ -28,8 +28,8 @@
 
   <% if @post.nil? %>
     <p>@post is nil</p>
-  <% elsif @current_user.nil? %>
-    <p>@current_user is nil</p>
+  <% elsif current_user.nil? %>
+    <p>current_user is nil</p>
   <% else %>
     <% like = current_user.likes.find_by(post: @post) %>
 
