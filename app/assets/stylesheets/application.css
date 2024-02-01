@@ -24,8 +24,8 @@
 }
 
 .alert, .notice {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -44,4 +44,33 @@
 
 .logout {
   margin-left: 3%;
+}
+
+.headline {
+  margin-top: 2rem;
+  margin-bottom: 15px;
+}
+
+.field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-btn2 {
+  background-color: dodgerblue;
+  color: black;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 10px;
+}
+
+.submit-btn2:hover {
+  background-color: rgb(119, 187, 255);
+  color: black;
+  padding: 10px;
+}
+
+.form-control {
+  width: 70%;
 }
