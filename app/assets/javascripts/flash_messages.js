@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     flashMessages.forEach(function(message) {
       setTimeout(function() {
         message.style.display = 'none';
-      }, 5000); // Adjust the time in milliseconds (e.g., 5000 for 5 seconds)
+      }, 4000); // Adjust the time in milliseconds (e.g., 5000 for 5 seconds)
     });
   }
 
