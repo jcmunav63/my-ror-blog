@@ -12,9 +12,13 @@ class User < ApplicationRecord
 
   # User::Roles
   # The available roles
-  # Roles = [ :admin , :default ] # Option A
+  Roles = [ :admin , :default ] # Option A
 
-  enum role: { user: 0, admin: 1 } # Option B
+  def admin?
+    role == 'admin'
+  end
+  
+  # enum role: { user: 0, admin: 1 } # Option B
 
   def is?( requested_role )
     self.role == requested_role.to_s
