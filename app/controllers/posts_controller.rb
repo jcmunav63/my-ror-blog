@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
+  load_and_authorize_resource except: :new
 
   def index
     @user = User.find(params[:user_id])
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    # @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     @post.destroy
     redirect_to user_posts_path(current_user), notice: 'Post was successfully destroyed.'
   end
