@@ -77,3 +77,5 @@ gem 'rspec-rails'
 gem 'will_paginate'
 
 gem 'devise', '~> 4.9'
+
+gem 'cancancan'
