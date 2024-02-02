@@ -10,11 +10,9 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  attr_accessible :name , :email
-
   # User::Roles
   # The available roles
-  Roles = [ :admin , :default ] # Option A
+  # Roles = [ :admin , :default ] # Option A
 
   enum role: { user: 0, admin: 1 } # Option B
 
