@@ -28,10 +28,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
-    @post = Post.find(params[:id])
+  @post = Post.find(params[:id])
     if @post.destroy
-      redirect_to user_posts_path(current_user), notice: 'Post was successfully destroyed.'
+      redirect_to user_posts_path(@post.author), notice: 'Post was successfully destroyed.'
     else
       redirect_to user_posts_path(current_user), alert: 'Post could not be destroyed.'
     end
