@@ -12,16 +12,16 @@ class User < ApplicationRecord
 
   # User::Roles
   # The available roles
-  Roles = [ :admin , :default ] # Option A
+  ROLES = %i[admin default].freeze # Option A
 
   def admin?
     role == 'admin'
   end
-  
+
   # enum role: { user: 0, admin: 1 } # Option B
 
-  def is?( requested_role )
-    self.role == requested_role.to_s
+  def is?(requested_role)
+    role == requested_role.to_s
   end
 
   def three_most_recent_posts

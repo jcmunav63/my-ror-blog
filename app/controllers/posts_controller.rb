@@ -29,8 +29,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     if @post.destroy
+      @user.posts_counter -= 1
+      @user.save
       redirect_to user_posts_path(@post.author), notice: 'Post was successfully destroyed.'
     else
       redirect_to user_posts_path(current_user), alert: 'Post could not be destroyed.'

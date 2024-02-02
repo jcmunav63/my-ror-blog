@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  # before_action :set_current_user
   before_action :authenticate_user!
 
   def new
@@ -17,6 +16,18 @@ class CommentsController < ApplicationController
       redirect_to user_post_path(@post.author, @post), notice: 'Comment was successfully created!'
     else
       render :new
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      @post.comments_counter -= 1
+      @post.save
+      redirect_to user_post_path(@post.author_id, @post), notice: 'Post was successfully destroyed.'
+    else
+      redirect_to(@comment.post)
     end
   end
 
