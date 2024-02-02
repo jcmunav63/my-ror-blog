@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Nineth part: Adding Devise gem for user authentication.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Tenth part: Implementing authorization rule for deleting posts and comments, by using the CanCanCan gem.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,6 +54,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Implement views for users and posts, and its corresponding comments and likes counters.**
 - **Adding two web forms for creating a post and adding a comment to a post.**
 - **Adding the Devise gem to our project for implementing user authentication.**
+- **Implementing authorization rules for deleting posts and comments, using the CanCanCan gem.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,11 +169,16 @@ Not available at the moment.
 - Twitter: [@JulioAle54](https://twitter.com/JulioAle54)
 - LinkedIn: [Julio Quezada](https://www.linkedin.com/in/quezadajulio/)
 
+👤 **Kazim Mohammadi**
+- GitHub: [@Mohammadi Kazim](https://github.com/kazim110)
+- Twitter: [@Mohammadi Kazim]()
+- LinkedIn: [@Mohammadi Kazim](https://www.linkedin.com/in/kazim-mohammadi/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **User authorization, according to roles, and API usage.**
+- **Adding API endpoints, and documentation.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
