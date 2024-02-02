@@ -170,9 +170,9 @@ Not available at the moment.
 - LinkedIn: [Julio Quezada](https://www.linkedin.com/in/quezadajulio/)
 
 👤 **Kazim Mohammadi**
-- GitHub: [@Mohammadi Kazim](https://github.com/kazim110)
-- Twitter: [@Mohammadi Kazim]()
-- LinkedIn: [@Mohammadi Kazim](https://www.linkedin.com/in/kazim-mohammadi/)
+- GitHub: [@Kazim110](https://github.com/kazim110)
+- Twitter: [@Kazim471](https://twitter.com/kazim471)
+- LinkedIn: [@Kazim Mohammadi](https://www.linkedin.com/in/kazim-mohammadi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
