@@ -8,16 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-first_user = User.create(name: 'Julio', photo: 'users/1.PNG', bio: 'Developer from El Salvador.', email: "julio@gmail.com", password: "me1234", password_confirmation: "me1234")
-second_user = User.create(name: 'Alejandro', photo: 'users/2.PNG', bio: 'Developer from El Salvador.', email: "alejandro@gmail.com", password: "me1234", password_confirmation: "me1234")
-third_user = User.create(name: 'Damaris', photo: 'users/3.PNG', bio: 'Nurse from El Salvador.', email: "damaris@gmail.com", password: "me1234", password_confirmation: "me1234")
-fourth_user = User.create(name: 'Jennifer', photo: 'users/4.PNG', bio: 'Nurse from USA.', email: "jennifer@gmail.com", password: "me1234", password_confirmation: "me1234")
-fifth_user = User.create(name: 'Saumira', photo: 'users/5.PNG', bio: 'Journalist from El Salvador.', email: "saumira@gmail.com", password: "me1234", password_confirmation: "me1234")
-sixth_user = User.create(name: 'Haydee', photo: 'users/6.PNG', bio: 'Chef from El salvador.', email: "haydee@gmail.com", password: "me1234", password_confirmation: "me1234")
-
-first_user.admin!
-second_user.admin!
-third_user.admin!
+first_user = User.create(name: 'Julio', photo: 'users/1.PNG', bio: 'Developer from El Salvador.', email: "julio@gmail.com", password: "me1234", password_confirmation: "me1234", role: "admin")
+second_user = User.create(name: 'Alejandro', photo: 'users/2.PNG', bio: 'Developer from El Salvador.', email: "alejandro@gmail.com", password: "me1234", password_confirmation: "me1234", role: "admin")
+third_user = User.create(name: 'Damaris', photo: 'users/3.PNG', bio: 'Nurse from El Salvador.', email: "damaris@gmail.com", password: "me1234", password_confirmation: "me1234", role: "admin")
+fourth_user = User.create(name: 'Jennifer', photo: 'users/4.PNG', bio: 'Nurse from USA.', email: "jennifer@gmail.com", password: "me1234", password_confirmation: "me1234", role: "default")
+fifth_user = User.create(name: 'Saumira', photo: 'users/5.PNG', bio: 'Journalist from El Salvador.', email: "saumira@gmail.com", password: "me1234", password_confirmation: "me1234", role: "default")
+sixth_user = User.create(name: 'Haydee', photo: 'users/6.PNG', bio: 'Chef from El salvador.', email: "haydee@gmail.com", password: "me1234", password_confirmation: "me1234", role: "default")
 
 first_post = Post.create(author: first_user, title: 'Hello, I love coding.', text: 'This is my first post, and I\'m thrilled to start this journey into the world of coding. There\'s so much to learn and create, and I can\'t wait to explore all the possibilities that programming offers. Whether it\'s building websites, analyzing data, or creating apps, I\'m here for it all!')
 second_post = Post.create(author: first_user, title: 'Hello, I am thinking all day long about space and time complexity.', text: 'This is my second post. Lately, I\'ve been captivated by the intricacies of space and time complexity in algorithms. It\'s fascinating how efficiently a problem can be solved by understanding and applying these concepts. Optimizing code not just for it to work, but for it to work efficiently, is a challenge I\'m eager to tackle.')
