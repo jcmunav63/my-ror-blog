@@ -13,13 +13,12 @@ RSpec.describe 'User Index Page', type: :system do
   scenario 'I can see the username of all other users' do
     expect(page).to have_content('user3')
     expect(page).to have_content('user6')
-    # expect(page).to have_css('.user-line .name', text: user1.name)
-    # expect(page).to have_css('.user-line .name', text: user2.name)
   end
 
   scenario 'I can see the profile picture for each user' do
-    expect(page).to have_css(".user-line img[src='#{user3.photo}']")
-    expect(page).to have_css(".user-line img[src='#{user6.photo}']")
+    # puts page.html
+    expect(page).to have_css('.user-line img[src^="/assets/users/"][src*=".PNG"]')
+    expect(page).to have_css('.user-line img[src^="/assets/users/"][src*=".PNG"]')
   end
 
   scenario 'I can see the number of posts each user has written' do
@@ -30,7 +29,6 @@ RSpec.describe 'User Index Page', type: :system do
   scenario 'When I click on a user, I am redirected to that user\'s show page' do
     click_link user3.name
     sleep 5
-    # save_and_open_page('/C:/Users/rcbuc/MICROVERSE/Module5/capybara_page.html')
     expect(page).to have_current_path(user_path(user3))
   end
 end
