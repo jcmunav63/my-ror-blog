@@ -10,8 +10,8 @@ class Ability
       can :manage, :all
     else
       can :read, :all
-      can [:update, :destroy], Post, user_id: user.id
-      can [:update, :destroy], Comment, user_id: user.id
+      can :destroy, Post, author_id: user.id # Check user_id / :update, 
+      can :destroy, Comment, user_id: user.id # :update, 
     end
   end
 end

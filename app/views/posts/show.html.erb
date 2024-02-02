@@ -38,5 +38,9 @@
     <% end %>
   <% end %>
 
+  <% if can? :destroy, @post %>
+    <%= link_to 'Delete', users_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
   <%= link_to "Back to all users", users_path, class: "root" %>
 </div>
