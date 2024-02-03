@@ -55,6 +55,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Adding two web forms for creating a post and adding a comment to a post.**
 - **Adding the Devise gem to our project for implementing user authentication.**
 - **Implementing authorization rules for deleting posts and comments, using the CanCanCan gem.**
+- **Adding endpoints: to list all posts of a user, to list all comments of a post, and to add a comment to a post.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +179,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Adding API endpoints, and documentation.**
+- **Add API documentation.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
