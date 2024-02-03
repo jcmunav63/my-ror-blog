@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'User Show Page', type: :system do
-  let(:user1) { User.create(name: 'John Smith', photo: '/assets/users/user1.PNG', bio: 'Lorem ipsum dolor sit amet,
+  let(:user1) do
+    User.create(name: 'John Smith', photo: '/assets/users/user1.PNG', bio: 'Lorem ipsum dolor sit amet,
    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim
      convallis aenean et. Lectus magna fringilla urna porttitor rhoncus dolor. Consequat interdum varius sit amet
-      mattis vulputate. Fringilla urna porttitor rhoncus dolor purus non enim.') }
-  
+      mattis vulputate. Fringilla urna porttitor rhoncus dolor purus non enim.')
+  end
+
   let!(:post1) { Post.create(author: user1, title: 'First Post', text: 'Lorem ipsum') }
   let!(:post2) { Post.create(author: user1, title: 'Second Post', text: 'Dolor sit amet') }
   let!(:post3) { Post.create(author: user1, title: 'Third Post', text: 'Consectetur adipiscing') }

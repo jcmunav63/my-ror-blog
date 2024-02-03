@@ -4,7 +4,7 @@ RSpec.describe 'Posts Index Page', type: :system do
   before do
     @user = create(:user)
     @posts = create_list(:post, 5, author: @user)
-    @posts.each { |post| create_list(:comment, 3, post: post, author: @user) }
+    @posts.each { |post| create_list(:comment, 3, post:, author: @user) }
 
     visit user_posts_path(@user)
   end

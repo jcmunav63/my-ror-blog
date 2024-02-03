@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-    # @posts = @user.posts.paginate(page: params[:page], per_page: 2)
+  # @posts = @user.posts.paginate(page: params[:page], per_page: 2)
   def new
     @user = User.find(params[:user_id])
     @post = @user.posts.build

@@ -32,8 +32,9 @@ RSpec.describe 'The Post model tests' do
 
   it 'Returns the five most recent comments of a post' do
     author5 = User.create!(name: 'Jack Daniels', posts_counter: 0,
-                         photo: 'https://unsplash.com/photo/2018/06/20/15/10/lake-24014_764.jpg')
-    post5 = Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0, author: author5)
+                           photo: 'https://unsplash.com/photo/2018/06/20/15/10/lake-24014_764.jpg')
+    post5 = Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0,
+                         author: author5)
     valid_text = 'This is a valid comment text.'
 
     recent_comments = 5.times.map do |i|
