@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'factories/user.rb'
 
 RSpec.describe 'User Index Page', type: :system do
   before do
