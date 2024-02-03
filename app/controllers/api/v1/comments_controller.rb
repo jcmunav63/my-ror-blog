@@ -29,8 +29,8 @@ module Api
         if comment.save
           render json: { message: 'Comment has been successfully saved.' }, status: :created
         else
-          render json: { message: 'Comment has been has not been saved due to some errors.', errors: comment.errors },
-          status: :bad_request
+          render json: { message: 'Comment has been has not been saved due to some errors.',
+                         errors: comment.errors }, status: :bad_request
         end
       end
 
