@@ -4,45 +4,35 @@ module Api
       skip_before_action :verify_authenticity_token
       skip_before_action :authenticate_user!
 
-      rescue_from ActiveRecord::RecordNotFound, with: :not_found
-      rescue_from ActionController::ParameterMissing do |exception|
-        render json: { error: exception.message }, status: :bad_request
-      end
+      before_action :set_post, only: %i[index create]
 
-      # Get api/v1/users/:user_id/posts/:post_id/comments
+      # GET /posts/:post_id/comments
+      # http://localhost:3000/api/v1/users/6/posts/16/comments
       def index
         comments = Post.find(params[:post_id]).comments
-
-        render json: comments, status: :ok
+        render json: comments
       end
 
-      # Post api/v1/users/:user_id/posts/:post_id/comments
+      # POST /posts/:post_id/comments
+      # http://localhost:3000/api/v1/users/6/posts/16/comments
       def create
-        user_id = params[:user_id]
-        user = User.find(user_id)
-        post_id = params[:post_id]
-        post = Post.find(post_id)
-        comment = Comment.new(comment_params)
-        comment.user = user
-        comment.post = post
-
-        if comment.save
-          render json: { message: 'Comment has been successfully saved.' }, status: :created
+        @comment = @post.comments.build(comment_params.merge(user_id: @user.id))
+        if @comment.save
+          render json: @comment, status: :created
         else
-          render json: { message: 'Comment has been has not been saved due to some errors.',
-                         errors: comment.errors }, status: :bad_request
+          render json: @comment.errors, status: :unprocessable_entity
         end
       end
 
       private
 
-      def comment_params
-        puts params
-        params.permit(:text)
+      def set_post
+        @user = User.find(params[:user_id])
+        @post = @user.posts.find(params[:post_id])
       end
 
-      def not_found
-        render json: { err: 'Error: Record not found ' }, status: :not_found
+      def comment_params
+        params.require(:comment).permit(:text)
       end
     end
   end
