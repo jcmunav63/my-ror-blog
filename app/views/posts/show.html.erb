@@ -15,7 +15,12 @@
   <div class="section1">
     <ul>
       <% @post.comments.each do |comment| %>
-        <li><%= comment.author.name %> says: <%= comment.text %></li>
+        <li class="line">
+          <%= comment.author.name %> says: <%= comment.text %>
+          <% if can? :destroy, comment %>
+            <%= button_to 'Delete Comment', user_post_comment_path(comment.post.author_id, comment.post.id, comment.id), style: 'display: inline;', class: "del-comment", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
@@ -36,6 +41,10 @@
     <% if like.nil? %>
       <%= button_to 'Like', user_post_likes_path(@post.author, @post), class: 'thumbs-up', style: 'display: inline;', id: 'like_button', method: :post %>
     <% end %>
+  <% end %>
+
+  <% if can? :destroy, @post %>
+    <%= button_to 'Delete Post', user_post_path(@post.author, @post), class: 'delete-btn', method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 
   <%= link_to "Back to all users", users_path, class: "root" %>

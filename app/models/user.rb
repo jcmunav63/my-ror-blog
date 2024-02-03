@@ -10,6 +10,20 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  # User::Roles
+  # The available roles
+  ROLES = %i[admin default].freeze # Option A
+
+  def admin?
+    role == 'admin'
+  end
+
+  # enum role: { user: 0, admin: 1 } # Option B
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+
   def three_most_recent_posts
     posts.order(created_at: :desc).limit(3)
   end
