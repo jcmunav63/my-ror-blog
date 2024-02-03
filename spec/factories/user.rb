@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :user do
     sequence(:name) { |n| "Test User #{n}" }
+    sequence(:photo) { |n| "/assets/users/#{n}.PNG" }
     bio do
       'Lorem ipsum dolor sit amet,
       consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
