@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'Posts Show Page', type: :system do
   before do
     @user = create(:user)
@@ -36,7 +38,6 @@ RSpec.describe 'Posts Show Page', type: :system do
       expect(page).to have_content(comment.author.name)
     end
   end
-  # expect(page).to have_content("#{comment1.author.name} says: #{comment1.text}")
 
   it 'displays the text of each comment' do
     @comments.each do |comment|
