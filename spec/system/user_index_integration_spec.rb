@@ -16,7 +16,6 @@ RSpec.describe 'User Index Page', type: :system do
   end
 
   scenario 'I can see the profile picture for each user' do
-    # puts page.html
     expect(page).to have_css('.user-line img[src^="/assets/users/"][src*=".PNG"]')
     expect(page).to have_css('.user-line img[src^="/assets/users/"][src*=".PNG"]')
   end
