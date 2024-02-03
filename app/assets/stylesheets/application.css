@@ -13,3 +13,150 @@
  *= require_tree .
  *= require_self
  */
+
+/* Styles for Devise alerts and notices */
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#form-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: auto;
+}
+
+#container {
+  margin-left: 10%;
+  margin-right: 5%;
+  width: auto;
+  text-align: center;
+}
+
+.flash-messages {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.alert,
+.notice {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.logout {
+  margin-left: 3%;
+}
+
+.headline {
+  margin-top: 2rem;
+  margin-left: 5%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.field,
+.checkbox {
+  margin: 0;
+  margin-right: 1%;
+  padding: 0;
+  padding-right: 1%;
+  width: 99%;
+}
+
+.submit-btn2 {
+  background-color: dodgerblue;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 3px 3px black;
+}
+
+.submit-btn2:hover {
+  background-color: rgb(138, 190, 241);
+  color: black;
+  border: 2px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 2px 2px black;
+}
+
+.submit-btn2:active {
+  background-color: rgb(0, 81, 161);
+  color: rgb(19, 1, 85);
+  border: 2px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 2px 2px black;
+}
+
+.container-links {
+  margin-left: 5%;
+}
+
+input {
+  margin: 0;
+  padding: 4px;
+  border: solid 1px black;
+  font-size: 1.5rem;
+}
+
+.links {
+  margin-left: 2%;
+}
+
+.form-control {
+  font-size: 1.2rem;
+  height: 35px;
+  width: 100%;
+  border: solid 2px black;
+}
+
+.submit-btn3 {
+  background-color: dodgerblue;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 60px;
+  box-shadow: 3px 3px black;
+}
+
+.submit-btn3:hover {
+  background-color: rgb(138, 190, 241);
+  color: black;
+  border: 2px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  box-shadow: 2px 2px black;
+}
+
+.submit-btn3:active {
+  background-color: rgb(0, 81, 161);
+  color: rgb(19, 1, 85);
+  border: 2px solid rgb(19, 1, 85);
+  border-radius: 4px;
+  box-shadow: 2px 2px black;
+}

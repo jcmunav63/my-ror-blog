@@ -174,3 +174,7 @@ section {
   text-decoration: none;
   box-shadow: 2px 2px rgba(122, 122, 122, 0.8);
 }
+
+.logout {
+  margin-left: 3%;
+}

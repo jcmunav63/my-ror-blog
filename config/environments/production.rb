@@ -29,6 +29,8 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  config.assets.precompile += %w( flash_messages.js )
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
@@ -94,4 +96,14 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.action_mailer.delivery_method = :smtp  # or another method suitable for production
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.example.com',  # Replace with your SMTP server address
+    port: 587,
+    user_name: 'your_username',
+    password: 'your_password',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+  config.action_mailer.default_url_options = { host: 'your_production_host' }
 end

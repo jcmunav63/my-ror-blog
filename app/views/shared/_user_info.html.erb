@@ -1,8 +1,8 @@
 <div class="user-line">
-  <% if user.photo.present? %>
-    <%= link_to image_tag(user.photo, class: 'user-photo'), user_path(user) %>
+  <% if user.photo.nil? %>
+    <%= link_to image_tag('users/default_user_image.PNG', class: 'user-photo'), user_path(user) %>
   <% else %>
-    <span>No photo available</span>
+    <%= link_to image_tag(user.photo, class: 'user-photo'), user_path(user) %>
   <% end %>
   <div class="name-counter">
     <span class="name">

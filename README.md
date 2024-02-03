@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Seventh part: Adding two web forms for creating a post and add a comment to a post.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Tenth part: Implementing authorization rule for deleting posts and comments, by using the CanCanCan gem.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,6 +53,9 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Setting up specs for all controllers.**
 - **Implement views for users and posts, and its corresponding comments and likes counters.**
 - **Adding two web forms for creating a post and adding a comment to a post.**
+- **Adding the Devise gem to our project for implementing user authentication.**
+- **Implementing authorization rules for deleting posts and comments, using the CanCanCan gem.**
+- **Adding endpoints: to list all posts of a user, to list all comments of a post, and to add a comment to a post.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,11 +164,22 @@ Not available at the moment.
 - Twitter: [@jcmunav63](https://twitter.com/jcmunav63)
 - LinkedIn: [@juan-carlos-muñoz](https://www.linkedin.com/in/juan-carlos-mu%C3%B1oz-5a15b6276/)
 
+👤 **Julio Alejandro Quezada**
+
+- GitHub: [Alejandroq12](https://github.com/Alejandroq12)
+- Twitter: [@JulioAle54](https://twitter.com/JulioAle54)
+- LinkedIn: [Julio Quezada](https://www.linkedin.com/in/quezadajulio/)
+
+👤 **Kazim Mohammadi**
+- GitHub: [@Kazim110](https://github.com/kazim110)
+- Twitter: [@Kazim471](https://twitter.com/kazim471)
+- LinkedIn: [@Kazim Mohammadi](https://www.linkedin.com/in/kazim-mohammadi/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **User authentication, and API usage.**
+- **Add API documentation.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,4 +215,3 @@ I would like to thank all of my colleagues who inspire me to do my best everyday
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-

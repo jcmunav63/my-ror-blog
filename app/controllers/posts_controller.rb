@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_current_user
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @user = User.find(params[:user_id])
@@ -7,12 +8,13 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id]) # current_user
     @post = Post.find(params[:id])
   end
 
   # @posts = @user.posts.paginate(page: params[:page], per_page: 2)
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id]) # current_user
     @post = @user.posts.build
   end
 
@@ -27,22 +29,30 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    if @post.destroy
+      @user.posts_counter -= 1
+      @user.save
+      redirect_to user_posts_path(@post.author), notice: 'Post was successfully destroyed.'
+    else
+      redirect_to user_posts_path(current_user), alert: 'Post could not be destroyed.'
+    end
+  end
+
   def like
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def unlike
     @post = Post.find(params[:id])
-    @post.likes.where(user: @current_user).destroy_all if @post.likes.exists?(user: @current_user)
-
-    redirect_to user_post_path(@post.author, @post)
+    @user = User.find(params[:user_id])
+    @post.likes.where(user: @user).destroy_all if @post.likes.exists?(user: @user)
   end
 
   private
-
-  def set_current_user
-    @current_user = User.find(params[:user_id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :text)
