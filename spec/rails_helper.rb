@@ -5,6 +5,8 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
+require 'factory_bot'
+FactoryBot.find_definitions
 # Add additional requires below this line. Rails is not loaded until this point!
 # require 'factory_bot_rails'
 
@@ -34,6 +36,7 @@ end
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.include FactoryBot::Syntax::Methods
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
   ]
