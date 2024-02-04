@@ -31,13 +31,14 @@ RSpec.describe 'The Post model tests' do
   end
 
   it 'Returns the five most recent comments of a post' do
-    user5 = User.create!(name: 'Jack Daniels', posts_counter: 0,
-                         photo: 'https://unsplash.com/photo/2018/06/20/15/10/lake-24014_764.jpg')
-    post5 = Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0, author: user5)
+    author5 = User.create!(name: 'Jack Daniels', posts_counter: 0,
+                           photo: 'https://unsplash.com/photo/2018/06/20/15/10/lake-24014_764.jpg')
+    post5 = Post.create!(title: 'Valid Title', text: 'Valid text', comments_counter: 0, likes_counter: 0,
+                         author: author5)
     valid_text = 'This is a valid comment text.'
 
     recent_comments = 5.times.map do |i|
-      Comment.create!(text: "#{valid_text} #{i}", post: post5, user: user5, created_at: i.days.ago)
+      Comment.create!(text: "#{valid_text} #{i}", post: post5, author: author5, created_at: i.days.ago)
     end
 
     expect(post5.five_most_recent_comments).to match_array(recent_comments.reverse)

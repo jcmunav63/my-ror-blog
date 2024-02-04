@@ -175,6 +175,14 @@ section {
   box-shadow: 2px 2px rgba(122, 122, 122, 0.8);
 }
 
+.right1 {
+  margin-right: 2rem;
+  float: right;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .logout {
   margin-left: 3%;
 }

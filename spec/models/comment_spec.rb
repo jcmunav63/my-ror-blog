@@ -6,7 +6,7 @@ RSpec.describe 'The Comment model tests' do
                         bio: 'American Professor', posts_counter: 0)
     post1 = Post.create(author_id: user1.id, title: 'Post #5', text: 'A post about computer programming.',
                         comments_counter: 0, likes_counter: 0)
-    comment1 = Comment.create(post: post1, user: user1, text: 'This is a comment for this post!')
+    comment1 = Comment.create(post: post1, author: user1, text: 'This is a comment for this post!')
 
     expect(comment1).to be_valid
     expect(post1.comments_counter).to eq(1)

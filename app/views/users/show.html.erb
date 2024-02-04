@@ -11,7 +11,7 @@
 
 <% @user.three_most_recent_posts.each do |post| %>
   <div class="post-border">
-    <p>Post <%= post.id %>: <strong><%= post.title %></strong></p>
+    <p>Post <%= post.id %>: <strong><%= post.title %></strong> <%= link_to "Show", user_post_path(post.author, post), class: "right1" %></p>
     <p><%= post.text %></p>
     <p class="right2">Comments: <strong><%= post.comments_counter %> &nbsp;</strong>
        Likes: <strong><%= post.likes_counter %></strong></p>
