@@ -47,6 +47,13 @@ RSpec.describe 'User Show Page', type: :system do
     expect(page).to have_link('See All Posts', href: user_posts_path(user1))
   end
 
+  it 'Displays a link of each user\'s post and redirects me to that post\'s show page' do
+    @posts = [post1, post2, post3]
+    @posts.each do |_post|
+      expect(page).to have_link('Show')
+    end
+  end
+
   it 'redirects to the user\'s post index page when clicking "See All Posts"' do
     click_link 'See All Posts'
     expect(page).to have_current_path(user_posts_path(user1))

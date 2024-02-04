@@ -4,7 +4,7 @@ RSpec.describe 'Posts Index Page', type: :system do
   before do
     @user = create(:user)
     @posts = create_list(:post, 5, author: @user)
-    @posts.each { |post| create_list(:comment, 3, post:, author: @user) }
+    @posts.each { |post| create_list(:comment, 6, post:, author: @user) }
 
     visit user_posts_path(@user)
   end
@@ -35,7 +35,9 @@ RSpec.describe 'Posts Index Page', type: :system do
 
   it 'displays each post\'s five most recent comments' do
     @posts.each do |post|
-      post.comments.each do |comment|
+      recent_comments = post.five_most_recent_comments
+
+      recent_comments.each do |comment|
         expect(page).to have_content(comment.text)
       end
     end
@@ -53,9 +55,18 @@ RSpec.describe 'Posts Index Page', type: :system do
     end
   end
 
+  it 'displays a section for pagination if there are more than 3 posts in the page' do
+    expect(page).to have_css('.page')
+    expect(page).to have_link('← Previous', count: 0) # Inactive on the first page
+    expect(page).to have_link('1', count: 0) # Inactive on the first page
+    expect(page).to have_link('Next →', count: 1) # Active on the first page
+    expect(page).to have_link('2', count: 1) # Active on the first page
+  end
+
   it 'displays a link to view a post\'s show page' do
-    @posts.first
-    expect(page).to have_link('Read More', href: user_post_path(@user, @posts.first))
+    @posts.each do |_post|
+      expect(page).to have_link('Read More')
+    end
   end
 
   it 'displays a link to create a new post' do

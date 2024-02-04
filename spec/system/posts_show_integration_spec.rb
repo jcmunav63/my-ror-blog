@@ -17,10 +17,6 @@ RSpec.describe 'Posts Show Page', type: :system do
     expect(page).to have_content("by: #{@post.author.name}")
   end
 
-  scenario 'displays the post\'s author' do
-    expect(page).to have_content("by: #{@post.author.name}")
-  end
-
   scenario 'displays the post\'s number of comments' do
     expect(page).to have_content("Comments: #{@post.comments_counter}")
   end
