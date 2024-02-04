@@ -31,7 +31,7 @@
 
 ## 📖 About project - My Ruby on Rails Blog App <a name="about-project"></a>
 
-The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. Tenth part: Implementing authorization rule for deleting posts and comments, by using the CanCanCan gem.
+The My Ruby on Rails (RoR) Blog App is a complete Blog project including a PostgreSQL database connection, user authentication, CRUD operations, user validation, testing and API usage. This is the twelveth part: Documenting the API endpoints developed in the previous branch.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,6 +56,7 @@ The My Ruby on Rails (RoR) Blog App is a complete Blog project including a Postg
 - **Adding the Devise gem to our project for implementing user authentication.**
 - **Implementing authorization rules for deleting posts and comments, using the CanCanCan gem.**
 - **Adding endpoints: to list all posts of a user, to list all comments of a post, and to add a comment to a post.**
+- **API documentation.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +180,7 @@ Not available at the moment.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add API documentation.**
+- **No future features.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
