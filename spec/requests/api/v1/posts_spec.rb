@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/posts', type: :request do
-
   consumes 'application/json'
   produces 'application/json'
   tags 'Posts'
@@ -10,7 +9,7 @@ RSpec.describe 'api/v1/posts', type: :request do
     # You'll want to customize the parameter types...
     parameter name: 'user_id', in: :path, type: :integer, description: 'user_id'
 
-    def set_response_example(example)
+    def response_example=(example)
       example.metadata[:response][:content] = {
         'application/json' => {
           example: JSON.parse(response.body, symbolize_names: true)
