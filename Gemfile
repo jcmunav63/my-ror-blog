@@ -74,11 +74,13 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
+
+gem 'devise', '~> 4.9'
+
+gem 'rswag'
+
 # Rubocop for linters checking
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'will_paginate'
-
-gem 'devise', '~> 4.9'
-
-gem 'cancancan'
