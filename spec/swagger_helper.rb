@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 RSpec.configure do |config|
+  config.swagger_dry_run = false
+
   # Specify a root folder where Swagger JSON files are generated
   # NOTE: If you're using the rswag-api to serve API descriptions, you'll need
   # to ensure that it's configured to serve Swagger from the same folder
@@ -31,6 +33,20 @@ RSpec.configure do |config|
             }
           }
         }
+      ]
+    }
+  }
+
+  config.swagger_docs = {
+    'api/v1/swagger.json' => {
+      swagger: '2.0',
+      info: {
+        title: 'Your API Documentation',
+        version: 'v1'
+      },
+      tags: [
+        { name: 'swagger', description: 'Swagger API documentation tests' },
+        # ... other tags
       ]
     }
   }
