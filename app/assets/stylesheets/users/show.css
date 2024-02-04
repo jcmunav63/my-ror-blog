@@ -182,3 +182,7 @@ section {
   font-size: 1rem;
   font-weight: 400;
 }
+
+.logout {
+  margin-left: 3%;
+}

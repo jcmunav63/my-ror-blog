@@ -4,9 +4,16 @@ class Comment < ApplicationRecord
 
   after_create :update_post_comments_counter
 
+  # after_destroy :decrease_post_comments_counter
+
   private
 
   def update_post_comments_counter
     post.update(comments_counter: post.comments.count)
   end
+
+  # def decrease_post_comments_counter
+  #   # self.decrement!(:comments_counter, 1)
+  #   # post.decrement!(:comments_counter, 1)
+  # end
 end
